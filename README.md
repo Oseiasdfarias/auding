@@ -1,5 +1,8 @@
 # AudIng Reprodutor de Áudio
 
+
+<br>
+
 ## Estrutura do Projeto
 
 ```
@@ -22,6 +25,10 @@
 │   └── __init__.py
 └── utils
 ```
+
+---
+
+<br>
 
 ## Dependências
 
@@ -46,3 +53,10 @@ mypy 1.1.1 Optional static typing for Python
 pygame 2.2.0 Python Game Developmen
 
 ```
+
+---
+
+<br>
+
+## Demostração Código
+![demo](./utils/demo.png)
