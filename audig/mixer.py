@@ -8,8 +8,8 @@ class TocarAudios(object):
     """
     Classe que executa os áudios.
     Args:
-        paths_abs: lista contendo os caminhos absolutos dos arquivos
-    *.mp3*.
+        paths_abs: lista contendo os caminhos absolutos
+                   dos arquivos *.mp3*.
     """
     def __init__(self, paths_abs: List[str]) -> None:
         self.paths_ans = paths_abs

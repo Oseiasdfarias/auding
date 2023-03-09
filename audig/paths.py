@@ -13,6 +13,8 @@ class Caminhos(object):
         path: Diretório raiz.
         subdirs: Lista de subdiretórios para serem varidos pelo
         código afim de obter os caminhos dos arquivos mp3.
+    Returns:
+        Não retorna nada.
     """
 
     def __init__(self, path: str, subdirs: Iterable[str]) -> None:
@@ -27,7 +29,7 @@ class Caminhos(object):
         Orquestra os métodos desse módulo para obter todos os arquivos
         mp3 das subpastas.
         Args:
-
+            argumentos
         Returns:
             retorna uma lista contendo todos os caminhos absolutos de
         todos os arquivos mp3 das subpastas.
@@ -40,8 +42,9 @@ class Caminhos(object):
         """
         Entra um diretório em relação ao diretório atual.
         Args:
-
+            Não possui argumentos.
         Returns:
+            Não retorna nada.
         """
         os.chdir(self.path)
 
@@ -49,8 +52,9 @@ class Caminhos(object):
         """
         Entra nos subdiretórios a partir da lista de subdiretório.
         Args:
-
+            Não possui argumentos.
         Returns:
+            Não retorna nada.
         """
         for subdir in self.subdirs:
             os.chdir(subdir)
@@ -64,8 +68,9 @@ class Caminhos(object):
         """
         Volta um diretório em relação ao diretório atual.
         Args:
-
+            Não possui argumentos.
         Returns:
+            Não retorna nada.
         """
         os.chdir("..")
 
@@ -74,8 +79,9 @@ class Caminhos(object):
         Adiciona para cada arquivo mp3 lido, seu caminho absoluto em
         uma lista python.
         Args:
-
+            Não possui argumentos.
         Returns:
+            Não retorna nada.
         """
         # Entra no subdiretório da Aula xx
         os.chdir(subdir)
