@@ -59,4 +59,4 @@ pygame 2.2.0 Python Game Developmen
 <br>
 
 ## Demostração Código
-![demo](./utils/demo.png)
+![demo](https://github.com/Oseiasdfarias/auding/blob/main/utils/demo.png?raw=true)

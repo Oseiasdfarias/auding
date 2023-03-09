@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "audig"
-version = "0.1.6"
+version = "0.1.7"
 description = "Reprodutor de áudio para estudo de inglês."
 authors = ["Oseiasdfarias <oseias.dfarias@gmail.com>"]
 readme = "README.md"
