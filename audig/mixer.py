@@ -7,7 +7,6 @@ from typing import List
 class TocarAudios(object):
     """
     Classe que executa os áudios.
-
     Args:
         paths_abs: lista contendo os caminhos absolutos dos arquivos
     *.mp3*.
@@ -20,7 +19,6 @@ class TocarAudios(object):
     def ouvir_lista(self) -> None:
         """
         Método responsável por reproduzir os áudios.
-        
         Returns:
             None
         """
@@ -55,7 +53,6 @@ class TocarAudios(object):
 
         Args:
             audio: caminho absoluto do áudio.
-        
         Returns:
             None
         """
@@ -70,10 +67,8 @@ class TocarAudios(object):
     def __get_audio_duration(audio: str) -> float:
         """
         Obtem a duração de tempo do áudio.
-
         Args:
             audio: caminho absoluto do áudio.
-        
         Returns:
             Duração do áudio em segundos.
         """
