@@ -5,12 +5,25 @@ from typing import List
 
 
 class TocarAudios(object):
+    """
+    Classe que executa os áudios.
+
+    Args:
+        paths_abs: lista contendo os caminhos absolutos dos arquivos
+    *.mp3*.
+    """
     def __init__(self, paths_abs: List[str]) -> None:
         self.paths_ans = paths_abs
         # Iniciando o mixer
         mixer.init()
 
     def ouvir_lista(self) -> None:
+        """
+        Método responsável por reproduzir os áudios.
+        
+        Returns:
+            None
+        """
         atual = 1
         print()
         for i in self.paths_ans:
@@ -37,6 +50,15 @@ class TocarAudios(object):
                     break
 
     def tocar(self, audio: str) -> None:
+        """
+        Carrega e reproduz o áudio a partir do  caminho absoluto dele.
+
+        Args:
+            audio: caminho absoluto do áudio.
+        
+        Returns:
+            None
+        """
         # Carregando audio
         mixer.music.load(audio)
         # Configurando volume
@@ -46,6 +68,15 @@ class TocarAudios(object):
 
     @staticmethod
     def __get_audio_duration(audio: str) -> float:
+        """
+        Obtem a duração de tempo do áudio.
+
+        Args:
+            audio: caminho absoluto do áudio.
+        
+        Returns:
+            Duração do áudio em segundos.
+        """
         with audioread.audio_open(audio) as f:
             # total de tempo em segundo do arquivo de audio
             totalsec = f.duration

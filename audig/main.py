@@ -4,10 +4,19 @@ from audig import TocarAudios
 
 
 class Run:
+    """
+    Modelo Matemático do Aeropêndulo para simulação dinâmica
+    """
+
     def __init__(self):
         self.run()
 
     def run(self) -> None:
+        """
+        Método executa o reprodutor de áudio.
+        Args:
+        """
+
         # Diretório raiz do curso.
         path = "/home/bits/CursoIngles/Curso_de_Ingles_vm5_2022/01_Fundacao"
         # Subdiretórios a serem listado os áudios

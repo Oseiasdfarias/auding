@@ -1,0 +1,44 @@
+site_name: Documentação da Lib Audig
+
+theme:
+  name: "material"
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/lightbulb
+        name: Modo Noturno
+    - scheme: slate
+      primary: deep blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: Modo Claro
+#  extra_css:
+#    - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.emoji          # suporte a emojis
+  - pymdownx.tasklist       # suporte a lista de tarefas
+  - pymdownx.mark           # suporte a mrcações
+  - pymdownx.tilde          # suporte a tachado
+  - pymdownx.highlight      # suporte a código
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search:
+  - mkdocstrings:
+      handlers:
+        python:
+          import:
+          - https://docs.python-requests.org/en/master/objects.inv
+
