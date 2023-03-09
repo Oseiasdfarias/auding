@@ -11,19 +11,15 @@
 │   ├── __init__.py
 │   ├── main.py
 │   ├── mixer.py
-│   ├── paths.py
-│   └── __pycache__
-│       ├── mixer.cpython-310.pyc
-│       └── paths.cpython-310.pyc
-├── dist
-│   ├── audig-0.1.0-py3-none-any.whl
-│   └── audig-0.1.0.tar.gz
+│   └── paths.py
 ├── poetry.lock
 ├── pyproject.toml
 ├── README.md
 ├── tests
 │   └── __init__.py
 └── utils
+    └── demo.png
+
 ```
 
 ---
@@ -50,7 +46,7 @@ mypy 1.1.1 Optional static typing for Python
 ├── mypy-extensions >=1.0.0
 ├── tomli >=1.1.0
 └── typing-extensions >=3.10
-pygame 2.2.0 Python Game Developmen
+pygame 2.2.0 Python Game Development
 
 ```
 
