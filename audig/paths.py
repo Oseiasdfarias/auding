@@ -13,8 +13,6 @@ class Caminhos(object):
         path: Diretório raiz.
         subdirs: Lista de subdiretórios para serem varidos pelo
         código afim de obter os caminhos dos arquivos mp3.
-    Returns:
-        Não retorna nada.
     """
 
     def __init__(self, path: str, subdirs: Iterable[str]) -> None:
