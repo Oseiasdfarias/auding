@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="main_reference/">
+        <link rel="next" href="mixer_reference/">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
@@ -299,25 +299,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#codigo-exemplo" class="md-nav__link">
+    Código Exemplo
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="main_reference/" class="md-nav__link">
-        Docs Módulo Run
-      </a>
     </li>
   
 
@@ -365,17 +357,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Configuracoes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Configuracoes
         </label>
@@ -481,6 +473,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#codigo-exemplo" class="md-nav__link">
+    Código Exemplo
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -516,9 +515,39 @@
 <ul>
 <li><mark>Caminhos()</mark> - Obtem todos os caminhos absolutos dos arquivos <code>.mp3</code> dos subdiretórios do diretório raiz.</li>
 <li><mark>TocarAudios()</mark> - Recebe como parâmetro a lista contendo os caminhos absolutos dos arquivos <code>.mp3</code> e reproduz cada arquivo.</li>
-<li><mark>main.Run()</mark> - Já possui um <code>método</code> que reproduz os áudios dos subdiretórios de um diretório raiz.</li>
 <li></li>
 </ul>
+<h2 id="codigo-exemplo">Código Exemplo</h2>
+<div class="highlight"><span class="filename">codigo_exemplo.py</span><pre><span></span><code><span class="kn">from</span> <span class="nn">audig</span> <span class="kn">import</span> <span class="n">Caminhos</span>
+<span class="kn">from</span> <span class="nn">audig</span> <span class="kn">import</span> <span class="n">TocarAudios</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sub_dirs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Método executa o reprodutor de áudio.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        path: Caminho absoluto do diretório raiz.</span>
+<span class="sd">        sub_dirs: subdiretórios do diretório raiz.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Não retorna nada.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Instanciando um objeto Caminhos</span>
+    <span class="n">caminhos</span> <span class="o">=</span> <span class="n">Caminhos</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">subdirs</span><span class="o">=</span><span class="n">sub_dirs</span><span class="p">)</span>
+    <span class="c1"># obtendo os caminhos absolutos dos arquivos de áudios.</span>
+    <span class="n">paths_abs</span> <span class="o">=</span> <span class="n">caminhos</span><span class="o">.</span><span class="n">get_paths</span><span class="p">()</span>
+    <span class="n">toca_audios</span> <span class="o">=</span> <span class="n">TocarAudios</span><span class="p">(</span><span class="n">paths_abs</span><span class="o">=</span><span class="n">paths_abs</span><span class="p">)</span>
+    <span class="n">toca_audios</span><span class="o">.</span><span class="n">ouvir_lista</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Diretório raiz do curso.</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;home/usuario1/seu_diretorio_raiz&quot;</span>
+    <span class="c1"># Subdiretórios a serem listado os áudios</span>
+    <span class="n">sub_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nome_subpasta1&quot;</span><span class="p">,</span> <span class="s2">&quot;nome_subpasta2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;nome_subpasta3&quot;</span><span class="p">,</span> <span class="s2">&quot;nome_subpastax&quot;</span><span class="p">]</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">sub_dirs</span><span class="o">=</span><span class="n">sub_dirs</span><span class="p">)</span>
+</code></pre></div>
 
 
 
