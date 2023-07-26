@@ -1,4 +1,5 @@
 from pygame import mixer
+import pygame
 import audioread
 import time
 from typing import List

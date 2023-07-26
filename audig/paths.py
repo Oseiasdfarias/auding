@@ -102,3 +102,4 @@ if __name__ == "__main__":
     sub_dirs = ["Módulo 02", ]
     caminhos = Caminhos(path=path, subdirs=sub_dirs)
     paths_abs = caminhos.get_paths()
+    print(paths_abs)
